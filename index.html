@@ -4,32 +4,240 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="FormMakerStyle.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
     <title>فرم ساز</title>
   </head>
   <body>
     <div class="formCreator">
-      <div>فرم ساز</div>
-      <div class="formContainer">
+      <div class="formMainTitle">"فرم ساز"</div>
+      <div class="d-flex">
+        <div class="sidebar">
+          <div class="sidebar-item" data-type="h2">h2</div>
+          <div class="sidebar-item" data-type="label">label</div>
+          <div class="sidebar-item has-children">
+            input
+            <div class="sidebar-submenu">
+              <div class="sidebar-item" data-type="input-text">text</div>
+              <div class="sidebar-item" data-type="input-number">number</div>
+              <div class="sidebar-item" data-type="input-checkbox">
+                checkbox
+              </div>
+              <div class="sidebar-item" data-type="input-radio">radio</div>
+              <div class="sidebar-item" data-type="input-selectbox">
+                selectbox
+              </div>
+            </div>
+          </div>
+          <div class="sidebar-item" data-type="textarea">textarea</div>
+          <div class="sidebar-item" data-type="button">button</div>
+          <div class="sidebar-item" data-type="text">text</div>
+        </div>
+        <div id="h2AddForm" class="hidden">
+          <label>عنوان مورد نظر را وارد کنید:</label>
+          <input id="h2Input" type="text" />
 
+          <label>شروع از ستون:</label>
+          <input id="h2ColStart" type="number" />
+
+          <label>تعداد ستون:</label>
+          <input id="h2ColSpan" type="number" />
+
+          <label>شروع از سطر:</label>
+          <input id="h2RowStart" type="number" />
+
+          <label>تعداد سطر:</label>
+          <input id="h2RowSpan" type="number" />
+
+          <button id="h2AddButton" type="button" class="btn btn-info">
+            افزودن
+          </button>
+        </div>
+
+        <div id="labelAddForm" class="hidden">
+          <label>نام لیبل:</label>
+          <input id="labelText" type="text" />
+
+          <label>شروع از ستون:</label>
+          <input id="labelColStart" type="number" />
+
+          <label>چند ستون بگیرد:</label>
+          <input id="labelColSpan" type="number" />
+
+          <label>شروع از ردیف:</label>
+          <input id="labelRowStart" type="number" />
+
+          <label>چند ردیف بگیرد:</label>
+          <input id="labelRowSpan" type="number" />
+
+          <button id="labelAddButton" type="button" class="btn btn-info">
+            افزودن
+          </button>
+        </div>
+
+        <div id="inputTextAddForm" class="hidden">
+          <label for="">داده با چه نامی به بک اند ارسال شود ؟</label>
+          <input
+            type="text"
+            placeholder="نام وارد شده باید مرتبط و انگلیسی باشد"
+          />
+          <label for=""> تعداد ستون مورد نیاز را وارد کنید:</label>
+          <input type="text" />
+          <label for=""> تعداد سطر مورد نیاز را وارد کنید:</label>
+          <input type="text" /><label for=""
+            >آیا فیلد مورد نظر ضروری است یا خیر</label
+          >
+          <label for="">ضروری</label>
+          <input type="radio" name="requiredField" value="required" />
+          <label for="">غیر ضروری</label>
+          <input type="radio" name="requiredField" value="optional" />
+          <button type="button" class="btn btn-info">افزودن</button>
+        </div>
+        <div id="inputNumberAddForm" class="hidden">Input Type: Number</div>
+        <div id="inputCheckboxAddForm" class="hidden">Input Type: Checkbox</div>
+        <div id="inputRadioAddForm" class="hidden">Input Type: Radio</div>
+        <div id="inputSelectboxAddForm" class="hidden">
+          Input Type: Selectbox
+        </div>
+        <div id="textareaAddForm" class="hidden">textareaAddForm</div>
+        <div id="buttonAddForm" class="hidden">buttonAddForm</div>
+        <div id="textAddForm" class="hidden">textAddForm</div>
       </div>
     </div>
-      <div class="grid-container"></div>
-    <form class="grid-form">
-      <div class="field field-fullname">
-        <label for="fullname">Full Name</label>
-        <input id="fullname" type="text" />
-      </div>
-
-      <div class="field field-email">
-        <label for="email">Email</label>
-        <input id="email" type="email" />
-      </div>
-
-      <div class="field field-message">
-        <label for="message">Message</label>
-        <textarea id="message"></textarea>
-      </div>
-    </form>
-       </div>
+    <div class="showForm"></div>
   </body>
+  <script>
+    const sidebarItems = document.querySelectorAll(
+      ".sidebar-item:not(.has-children)"
+    );
+    const expandableItems = document.querySelectorAll(".has-children");
+
+    const h2AddForm = document.getElementById("h2AddForm");
+    const labelAddForm = document.getElementById("labelAddForm");
+    const inputTextAddForm = document.getElementById("inputTextAddForm");
+    const inputNumberAddForm = document.getElementById("inputNumberAddForm");
+    const inputCheckboxAddForm = document.getElementById(
+      "inputCheckboxAddForm"
+    );
+    const inputRadioAddForm = document.getElementById("inputRadioAddForm");
+    const inputSelectboxAddForm = document.getElementById(
+      "inputSelectboxAddForm"
+    );
+    const textareaAddForm = document.getElementById("textareaAddForm");
+    const buttonAddForm = document.getElementById("buttonAddForm");
+    const textAddForm = document.getElementById("textAddForm");
+
+    const allForms = [
+      h2AddForm,
+      labelAddForm,
+      inputTextAddForm,
+      inputNumberAddForm,
+      inputCheckboxAddForm,
+      inputRadioAddForm,
+      inputSelectboxAddForm,
+      textareaAddForm,
+      buttonAddForm,
+      textAddForm,
+    ];
+
+    // Handle clicks on expandable parents like "input"
+    expandableItems.forEach((item) => {
+      item.addEventListener("click", function (e) {
+        if (e.target !== this) return;
+
+        // Hide all forms
+        allForms.forEach((form) => (form.className = "hidden"));
+
+        // Collapse others
+        expandableItems.forEach((i) => {
+          if (i !== this) i.classList.remove("active");
+        });
+
+        this.classList.toggle("active");
+      });
+    });
+
+    // Handle clicks on leaf items
+    sidebarItems.forEach((item) => {
+      item.addEventListener("click", function () {
+        allForms.forEach((form) => (form.className = "hidden"));
+
+        const type = this.dataset.type;
+
+        if (type === "h2") {
+          h2AddForm.className = "visible";
+        } else if (type === "label") {
+          labelAddForm.className = "visible";
+        } else if (type === "input-text") {
+          inputTextAddForm.className = "visible";
+        } else if (type === "input-number") {
+          inputNumberAddForm.className = "visible";
+        } else if (type === "input-checkbox") {
+          inputCheckboxAddForm.className = "visible";
+        } else if (type === "input-radio") {
+          inputRadioAddForm.className = "visible";
+        } else if (type === "input-selectbox") {
+          inputSelectboxAddForm.className = "visible";
+        } else if (type === "textarea") {
+          textareaAddForm.className = "visible";
+        } else if (type === "button") {
+          buttonAddForm.className = "visible";
+        } else if (type === "text") {
+          textAddForm.className = "visible";
+        }
+      });
+    });
+
+    const h2Input = document.getElementById("h2Input");
+    const h2AddButton = document.getElementById("h2AddButton");
+    const showForm = document.querySelector(".showForm");
+
+    h2AddButton.addEventListener("click", function () {
+      const value = h2Input.value.trim();
+      if (value === "") {
+        alert("لطفا مقداری وارد کنید.");
+        return;
+      }
+
+      const h2 = document.createElement("h2");
+      h2.textContent = value;
+      h2.style.textAlign = "center";
+      showForm.appendChild(h2);
+
+      // Clear input after adding
+      h2Input.value = "";
+    });
+
+    const labelAddButton = document.getElementById("labelAddButton");
+
+    labelAddButton.addEventListener("click", function () {
+      const text = document.getElementById("labelText").value.trim();
+      const colStart = parseInt(document.getElementById("labelColStart").value);
+      const colSpan = parseInt(document.getElementById("labelColSpan").value);
+      const rowStart = parseInt(document.getElementById("labelRowStart").value);
+      const rowSpan = parseInt(document.getElementById("labelRowSpan").value);
+
+      if (
+        !text ||
+        isNaN(colStart) ||
+        isNaN(colSpan) ||
+        isNaN(rowStart) ||
+        isNaN(rowSpan)
+      ) {
+        alert("لطفاً همه فیلدها را کامل وارد کنید.");
+        return;
+      }
+
+      const label = document.createElement("label");
+      label.textContent = text;
+      label.style.gridColumn = `${colStart} / span ${colSpan}`;
+      label.style.gridRow = `${rowStart} / span ${rowSpan}`;
+      label.style.padding = "5px";
+      showForm.appendChild(label);
+    });
+  </script>
 </html>
