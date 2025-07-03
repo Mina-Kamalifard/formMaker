@@ -164,3 +164,10 @@ p.description {
   display: flex;
   justify-content: center;
 }
+.sidebar-submenu {
+  display: none;
+}
+
+.sidebar-submenu.show {
+  display: block;
+}

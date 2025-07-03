@@ -20,26 +20,27 @@
         <div class="sidebar">
           <div class="sidebar-item" data-type="h2">h2</div>
           <div class="sidebar-item" data-type="label">label</div>
+          <div class="sidebar-item" data-type="text">text</div>
+          <div class="sidebar-item" data-type="textarea">textarea</div>
+          <div class="sidebar-item" data-type="button">button</div>
           <div class="sidebar-item has-children">
             input
             <div class="sidebar-submenu">
               <div class="sidebar-item" data-type="input-text">text</div>
               <div class="sidebar-item" data-type="input-number">number</div>
+              <div class="sidebar-item" data-type="input-selectbox">
+                selectbox
+              </div>
               <div class="sidebar-item" data-type="input-checkbox">
                 checkbox
               </div>
               <div class="sidebar-item" data-type="input-radio">radio</div>
-              <div class="sidebar-item" data-type="input-selectbox">
-                selectbox
-              </div>
             </div>
           </div>
-          <div class="sidebar-item" data-type="textarea">textarea</div>
-          <div class="sidebar-item" data-type="button">button</div>
-          <div class="sidebar-item" data-type="text">text</div>
         </div>
 
         <div id="h2AddForm" class="hidden">
+          <h5>افزودن title</h5>
           <label>عنوان مورد نظر را وارد کنید:</label>
           <input id="h2Input" type="text" />
 
@@ -61,6 +62,7 @@
         </div>
 
         <div id="labelAddForm" class="hidden">
+          <h5>افزودن label</h5>
           <label>نام لیبل:</label>
           <input id="labelText" type="text" />
 
@@ -80,59 +82,8 @@
             افزودن
           </button>
         </div>
-        <div id="inputTextAddForm" class="hidden">
-          <label for="">داده با چه نامی به بک اند ارسال شود ؟</label>
-          <input
-            type="text"
-            placeholder="نام وارد شده باید مرتبط و انگلیسی باشد"
-          />
-
-          <label>شروع از ستون:</label>
-          <input id="labelColStart" type="number" />
-
-          <label>چند ستون بگیرد:</label>
-          <input id="labelColSpan" type="number" />
-
-          <label>شروع از ردیف:</label>
-          <input id="labelRowStart" type="number" />
-
-          <label>چند ردیف بگیرد:</label>
-          <input id="labelRowSpan" type="number" />
-
-          <label for="">آیا فیلد مورد نظر ضروری است یا خیر</label>
-          <label for="">ضروری</label>
-          <input type="radio" name="requiredField" value="required" />
-          <label for="">غیر ضروری</label>
-          <input type="radio" name="requiredField" value="optional" />
-          <button type="button" class="btn btn-info">افزودن</button>
-        </div>
-
-        <div id="inputNumberAddForm" class="hidden">
-          <label for="">داده با چه نامی به بک اند ارسال شود ؟</label>
-          <input
-            type="text"
-            placeholder="نام وارد شده باید مرتبط و انگلیسی باشد"
-          />
-          <label>شروع از ستون:</label>
-          <input id="labelColStart" type="number" />
-
-          <label>چند ستون بگیرد:</label>
-          <input id="labelColSpan" type="number" />
-
-          <label>شروع از ردیف:</label>
-          <input id="labelRowStart" type="number" />
-
-          <label>چند ردیف بگیرد:</label>
-          <input id="labelRowSpan" type="number" />
-
-          <label for="">آیا فیلد مورد نظر ضروری است یا خیر</label>
-          <label for="">ضروری</label>
-          <input type="radio" name="requiredField" value="required" />
-          <label for="">غیر ضروری</label>
-          <input type="radio" name="requiredField" value="optional" />
-          <button type="button" class="btn btn-info">افزودن</button>
-        </div>
         <div id="textAddForm" class="hidden form-panel">
+          <h5>افزودن text</h5>
           <label>متن دلخواه:</label>
           <input id="textAddContent" type="text" />
 
@@ -152,8 +103,174 @@
             افزودن
           </button>
         </div>
+        <div id="textareaAddForm" class="hidden">
+          <h5>افزودن textarea</h5>
+          <label>داده با چه نامی به بک اند ارسال شود ؟</label>
+          <input
+            id="textareaFieldName"
+            type="text"
+            placeholder="نام وارد شده باید مرتبط و انگلیسی باشد"
+          />
 
+          <label>شروع از ستون:</label>
+          <input id="textareaColStart" type="number" />
+
+          <label>تعداد ستون:</label>
+          <input id="textareaColSpan" type="number" />
+
+          <label>شروع از سطر:</label>
+          <input id="textareaRowStart" type="number" />
+
+          <label>تعداد سطر:</label>
+          <input id="textareaRowSpan" type="number" />
+
+          <label>آیا فیلد مورد نظر ضروری است یا خیر</label><br />
+          <label>ضروری</label>
+          <input type="radio" name="textareaRequiredField" value="required" />
+          <label>غیر ضروری</label>
+          <input type="radio" name="textareaRequiredField" value="optional" />
+
+          <button id="textareaAddButton" type="button" class="btn btn-info">
+            افزودن
+          </button>
+        </div>
+        <div id="buttonAddForm" class="hidden">
+          <h5>افزودن button</h5>
+          <label for="">لیبل دکمه؟</label>
+          <input type="text" />
+          <label for="">رنگ دکمه؟</label>
+          <br />
+          <select>
+            <option value="" style="background-color: #007bff; color: #fff">
+              btn btn-primary
+            </option>
+            <option value="" style="background-color: #6c757d; color: #fff">
+              btn btn-secondary
+            </option>
+            <option value="" style="background-color: #28a745; color: #fff">
+              btn btn-success
+            </option>
+            <option value="" style="background-color: #dc3545; color: #fff">
+              btn btn-danger
+            </option>
+            <option value="" style="background-color: #ffc107; color: #212529">
+              btn btn-warning
+            </option>
+            <option value="" style="background-color: #17a2b8; color: #fff">
+              btn btn-info
+            </option>
+            <option value="" style="background-color: #f8f9fa; color: #212529">
+              btn btn-light
+            </option>
+            <option value="" style="background-color: #343a40; color: #fff">
+              btn btn-dark
+            </option>
+            <option value="" style="background-color: #fff; color: #007bff">
+              btn btn-link
+            </option>
+          </select>
+          <br />
+          <label>شروع از ستون:</label>
+          <input id="textColStart" type="number" />
+
+          <label>تعداد ستون:</label>
+          <input id="textColSpan" type="number" />
+
+          <label>شروع از سطر:</label>
+          <input id="textRowStart" type="number" />
+
+          <label>تعداد سطر:</label>
+          <input id="textRowSpan" type="number" />
+          <button type="button" class="btn btn-info">افزودن</button>
+        </div>
+        <div id="inputTextAddForm" class="hidden">
+          <h5>افزودن input(text)</h5>
+          <label for="">داده با چه نامی به بک اند ارسال شود ؟</label>
+          <input
+            type="text"
+            placeholder="نام وارد شده باید مرتبط و انگلیسی باشد"
+          />
+
+          <label>شروع از ستون:</label>
+          <input id="labelColStart" type="number" />
+
+          <label>چند ستون بگیرد:</label>
+          <input id="labelColSpan" type="number" />
+
+          <label>شروع از ردیف:</label>
+          <input id="labelRowStart" type="number" />
+
+          <label>چند ردیف بگیرد:</label>
+          <input id="labelRowSpan" type="number" />
+
+          <label for="">آیا فیلد مورد نظر ضروری است یا خیر</label><br />
+          <label for="">ضروری</label>
+          <input type="radio" name="requiredField" value="required" />
+          <label for="">غیر ضروری</label>
+          <input type="radio" name="requiredField" value="optional" />
+          <button type="button" class="btn btn-info">افزودن</button>
+        </div>
+
+        <div id="inputNumberAddForm" class="hidden">
+          <h5>افزودن input(number)</h5>
+          <label for="">داده با چه نامی به بک اند ارسال شود ؟</label>
+          <input
+            type="text"
+            placeholder="نام وارد شده باید مرتبط و انگلیسی باشد"
+          />
+          <label>شروع از ستون:</label>
+          <input id="labelColStart" type="number" />
+
+          <label>چند ستون بگیرد:</label>
+          <input id="labelColSpan" type="number" />
+
+          <label>شروع از ردیف:</label>
+          <input id="labelRowStart" type="number" />
+
+          <label>چند ردیف بگیرد:</label>
+          <input id="labelRowSpan" type="number" />
+
+          <label for="">آیا فیلد مورد نظر ضروری است یا خیر</label><br />
+          <label for="">ضروری</label>
+          <input type="radio" name="requiredField" value="required" />
+          <label for="">غیر ضروری</label>
+          <input type="radio" name="requiredField" value="optional" />
+          <button type="button" class="btn btn-info">افزودن</button>
+        </div>
+
+        <div id="inputSelectboxAddForm" class="hidden">
+          <h5>افزودن input(selectbox)</h5>
+          <label for="">داده با چه نامی به بک اند ارسال شود ؟</label>
+          <input
+            type="text"
+            placeholder="نام وارد شده باید مرتبط و انگلیسی باشد"
+          />
+
+          <label for="">تعداد option مورد نیاز</label>
+          <input type="text" id="optionCountInput" />
+
+          <button type="button" id="showOptionsBtn">
+            باز شدن input برای وارد کردن option
+          </button>
+
+          <div id="optionsContainer"></div>
+
+          <label for="">تعداد ستون مورد نیاز را وارد کنید:</label>
+          <input type="text" />
+
+          <label for="">تعداد سطر مورد نیاز را وارد کنید:</label>
+          <input type="text" />
+
+          <label for="">آیا فیلد مورد نظر ضروری است یا خیر</label><br />
+          <label for="">ضروری</label>
+          <input type="radio" name="requiredField" value="required" />
+          <label for="">غیر ضروری</label>
+          <input type="radio" name="requiredField" value="optional" />
+
+          <button type="button" class="btn btn-info">افزودن</button>
+        </div>
         <div id="inputCheckboxAddForm" class="hidden">
+          <h5>افزودن input(checkbox)</h5>
           <label for="">داده با چه نامی به بک اند ارسال شود ؟</label>
           <input
             type="text"
@@ -183,7 +300,7 @@
 
           <div id="checkboxPreviewContainer" style="margin-top: 15px"></div>
 
-          <label for="">آیا فیلد مورد نظر ضروری است یا خیر</label>
+          <label for="">آیا فیلد مورد نظر ضروری است یا خیر</label><br />
           <label for="">ضروری</label>
           <input type="radio" name="requiredField" value="required" />
           <label for="">غیر ضروری</label>
@@ -194,6 +311,7 @@
           </button>
         </div>
         <div id="inputRadioAddForm" class="hidden">
+          <h5>افزودن input(radio)</h5>
           <label for="">داده با چه نامی به بک اند ارسال شود ؟</label>
           <input
             type="text"
@@ -217,7 +335,7 @@
 
           <div id="radioPreviewContainer" style="margin-top: 15px"></div>
 
-          <label for="">آیا فیلد مورد نظر ضروری است یا خیر</label>
+          <label for="">آیا فیلد مورد نظر ضروری است یا خیر</label><br />
           <label for="">ضروری</label>
           <input type="radio" name="requiredField" value="required" />
           <label for="">غیر ضروری</label>
@@ -226,96 +344,6 @@
           <button type="button" class="btn btn-info" id="addRadiosBtn">
             افزودن
           </button>
-        </div>
-        <div id="inputSelectboxAddForm" class="hidden">
-          <label for="">داده با چه نامی به بک اند ارسال شود ؟</label>
-          <input
-            type="text"
-            placeholder="نام وارد شده باید مرتبط و انگلیسی باشد"
-          />
-
-          <label for="">تعداد option مورد نیاز</label>
-          <input type="text" id="optionCountInput" />
-
-          <button type="button" id="showOptionsBtn">
-            باز شدن input برای وارد کردن option
-          </button>
-
-          <div id="optionsContainer"></div>
-
-          <label for="">تعداد ستون مورد نیاز را وارد کنید:</label>
-          <input type="text" />
-
-          <label for="">تعداد سطر مورد نیاز را وارد کنید:</label>
-          <input type="text" />
-
-          <label for="">آیا فیلد مورد نظر ضروری است یا خیر</label>
-          <label for="">ضروری</label>
-          <input type="radio" name="requiredField" value="required" />
-          <label for="">غیر ضروری</label>
-          <input type="radio" name="requiredField" value="optional" />
-
-          <button type="button" class="btn btn-info">افزودن</button>
-        </div>
-        <div id="textareaAddForm" class="hidden">
-          <label for="">داده با چه نامی به بک اند ارسال شود ؟</label>
-          <input
-            type="text"
-            placeholder="نام وارد شده باید مرتبط و انگلیسی باشد"
-          />
-          <label for=""> تعداد ستون مورد نیاز را وارد کنید:</label>
-          <input type="text" />
-          <label for=""> تعداد سطر مورد نیاز را وارد کنید:</label>
-          <input type="text" /><label for=""
-            >آیا فیلد مورد نظر ضروری است یا خیر</label
-          >
-          <label for="">ضروری</label>
-          <input type="radio" name="requiredField" value="required" />
-          <label for="">غیر ضروری</label>
-          <input type="radio" name="requiredField" value="optional" />
-          <button type="button" class="btn btn-info">افزودن</button>
-        </div>
-        <div id="buttonAddForm" class="hidden">
-          <label for="">لیبل دکمه؟</label>
-          <input
-            type="text"
-            placeholder="نام وارد شده باید مرتبط و انگلیسی باشد"
-          />
-          <label for="">رنگ دکمه؟</label>
-          <select>
-            <option value="" style="background-color: #007bff">
-              btn btn-primary
-            </option>
-            <option value="" style="background-color: #6c757d">
-              btn btn-secondary
-            </option>
-            <option value="" style="background-color: #28a745">
-              btn btn-success
-            </option>
-            <option value="" style="background-color: #c82333">
-              btn btn-danger
-            </option>
-            <option value="" style="background-color: #ffc107">
-              btn btn-warning
-            </option>
-            <option value="" style="background-color: #17a2b8">
-              btn btn-info
-            </option>
-            <option value="" style="background-color: #f8f9fa">
-              btn btn-light
-            </option>
-            <option value="" style="background-color: #343a40">
-              btn btn-dark
-            </option>
-            <option value="" style="background-color: #fff">
-              btn btn-link
-            </option>
-          </select>
-          <label for=""> تعداد ستون مورد نیاز را وارد کنید:</label>
-          <input type="text" />
-          <label for=""> تعداد سطر مورد نیاز را وارد کنید:</label>
-          <input type="text" />
-          <button type="button" class="btn btn-info">افزودن</button>
         </div>
       </div>
     </div>
@@ -328,152 +356,223 @@
     <div class="showForm"></div>
 
     <script>
-      // const sidebarItems = document.querySelectorAll(
-      //   ".sidebar-item:not(.has-children)"
-      // );
-      // const expandableItems = document.querySelectorAll(".has-children");
+      document.addEventListener("DOMContentLoaded", () => {
+        const sidebarItems = document.querySelectorAll(
+          ".sidebar-item[data-type]"
+        );
+        const allPanels = document.querySelectorAll(
+          "#h2AddForm, #labelAddForm, #inputTextAddForm, #inputNumberAddForm, #textAddForm, #inputCheckboxAddForm, #inputRadioAddForm, #inputSelectboxAddForm, #textareaAddForm, #buttonAddForm"
+        );
 
-      // const h2AddForm = document.getElementById("h2AddForm");
-      // const labelAddForm = document.getElementById("labelAddForm");
-      // const inputTextAddForm = document.getElementById("inputTextAddForm");
-      // const inputNumberAddForm = document.getElementById("inputNumberAddForm");
-      // const textAddForm = document.getElementById("textAddForm");
-      // const inputCheckboxAddForm = document.getElementById(
-      //   "inputCheckboxAddForm"
-      // );
-      // const inputRadioAddForm = document.getElementById("inputRadioAddForm");
-      // const inputSelectboxAddForm = document.getElementById(
-      //   "inputSelectboxAddForm"
-      // );
-      // const textareaAddForm = document.getElementById("textareaAddForm");
-      // const buttonAddForm = document.getElementById("buttonAddForm");
+        sidebarItems.forEach((item) => {
+          item.addEventListener("click", () => {
+            // Hide all panels
+            allPanels.forEach((panel) => panel.classList.add("hidden"));
 
-      // const allForms = [
-      //   h2AddForm,
-      //   labelAddForm,
-      //   inputTextAddForm,
-      //   inputNumberAddForm,
-      //   textAddForm,
-      //   inputCheckboxAddForm,
-      //   inputRadioAddForm,
-      //   inputSelectboxAddForm,
-      //   textareaAddForm,
-      //   buttonAddForm,
-      // ];
+            // Get data-type attribute of clicked sidebar item
+            const dataType = item.getAttribute("data-type");
 
-      // expandableItems.forEach((item) => {
-      //   item.addEventListener("click", function (e) {
-      //     if (e.target !== this) return;
+            // Compose target panel ID from data-type
+            let targetPanelId = "";
 
-      //     allForms.forEach((form) => form.classList.add("hidden"));
+            if (dataType === "h2") targetPanelId = "h2AddForm";
+            else if (dataType === "label") targetPanelId = "labelAddForm";
+            else if (dataType === "input-text")
+              targetPanelId = "inputTextAddForm";
+            else if (dataType === "input-number")
+              targetPanelId = "inputNumberAddForm";
+            else if (dataType === "text") targetPanelId = "textAddForm";
+            else if (dataType === "input-checkbox")
+              targetPanelId = "inputCheckboxAddForm";
+            else if (dataType === "input-radio")
+              targetPanelId = "inputRadioAddForm";
+            else if (dataType === "input-selectbox")
+              targetPanelId = "inputSelectboxAddForm";
+            else if (dataType === "textarea") targetPanelId = "textareaAddForm";
+            else if (dataType === "button") targetPanelId = "buttonAddForm";
 
-      //     expandableItems.forEach((i) => {
-      //       if (i !== this) i.classList.remove("active");
-      //     });
+            if (targetPanelId) {
+              const targetPanel = document.getElementById(targetPanelId);
+              if (targetPanel) {
+                targetPanel.classList.remove("hidden");
+              }
+            }
+          });
+        });
+      });
 
-      //     this.classList.toggle("active");
-      //   });
-      // });
+      document.addEventListener("DOMContentLoaded", () => {
+        const toggles = document.querySelectorAll(".sidebar-item.has-children");
 
-      // sidebarItems.forEach((item) => {
-      //   item.addEventListener("click", function () {
-      //     allForms.forEach((form) => form.classList.add("hidden"));
+        toggles.forEach((toggle) => {
+          toggle.addEventListener("click", (e) => {
+            // Only toggle if the click was directly on the parent, not inside submenu
+            if (e.target === toggle) {
+              const submenu = toggle.querySelector(".sidebar-submenu");
+              submenu.classList.toggle("show");
+            }
+          });
+        });
+      });
+      //-------------------------------------------------------------------------------------------------------//
+      function updateGridColumns() {
+        const gridColumns =
+          getComputedStyle(showForm).getPropertyValue("--grid-columns") || "12";
+        document.getElementById("currentGridColumns").textContent = gridColumns;
+      }
 
-      //     const type = this.dataset.type;
-      //     if (type === "h2") {
-      //       h2AddForm.classList.remove("hidden");
-      //     } else if (type === "label") {
-      //       labelAddForm.classList.remove("hidden");
-      //     } else if (type === "input-text") {
-      //       labelAddForm.classList.remove("hidden");
-      //     } else if (type === "input-number") {
-      //       labelAddForm.classList.remove("hidden");
-      //     } else if (type === "input-checkbox") {
-      //       labelAddForm.classList.remove("hidden");
-      //     } else if (type === "input-radio") {
-      //       labelAddForm.classList.remove("hidden");
-      //     } else if (type === "input-selectbox") {
-      //       labelAddForm.classList.remove("hidden");
-      //     } else if (type === "textarea") {
-      //       labelAddForm.classList.remove("hidden");
-      //     } else if (type === "text") {
-      //       labelAddForm.classList.remove("hidden");
-      //     } else if (type === "button") {
-      //       labelAddForm.classList.remove("hidden");
-      //     }
-      //   });
-      // });
+      window.addEventListener("load", updateGridColumns);
+      window.addEventListener("resize", updateGridColumns);
+      //----------------------------------------------------------------------------------------------------------//
+      const h2Input = document.getElementById("h2Input");
+      const h2AddButton = document.getElementById("h2AddButton");
+      const showForm = document.querySelector(".showForm");
 
-      // const h2Input = document.getElementById("h2Input");
-      // const h2AddButton = document.getElementById("h2AddButton");
-      // const showForm = document.querySelector(".showForm");
+      h2AddButton.addEventListener("click", function () {
+        const value = h2Input.value.trim();
+        const colStart = +document.getElementById("h2ColStart").value;
+        const colSpan = +document.getElementById("h2ColSpan").value;
+        const rowStart = +document.getElementById("h2RowStart").value;
+        const rowSpan = +document.getElementById("h2RowSpan").value;
 
-      // h2AddButton.addEventListener("click", function () {
-      //   const value = h2Input.value.trim();
-      //   const colStart = +document.getElementById("h2ColStart").value;
-      //   const colSpan = +document.getElementById("h2ColSpan").value;
-      //   const rowStart = +document.getElementById("h2RowStart").value;
-      //   const rowSpan = +document.getElementById("h2RowSpan").value;
+        if (!value) {
+          alert("لطفا عنوان را وارد کنید.");
+          return;
+        }
 
-      //   if (!value) {
-      //     alert("لطفا عنوان را وارد کنید.");
-      //     return;
-      //   }
+        const h2 = document.createElement("h2");
+        h2.textContent = value;
+        h2.style.textAlign = "center";
+        if (colStart && colSpan) {
+          h2.style.gridColumn = `${colStart} / span ${colSpan}`;
+        }
+        if (rowStart && rowSpan) {
+          h2.style.gridRow = `${rowStart} / span ${rowSpan}`;
+        }
 
-      //   const h2 = document.createElement("h2");
-      //   h2.textContent = value;
-      //   h2.style.textAlign = "center";
-      //   if (colStart && colSpan) {
-      //     h2.style.gridColumn = `${colStart} / span ${colSpan}`;
-      //   }
-      //   if (rowStart && rowSpan) {
-      //     h2.style.gridRow = `${rowStart} / span ${rowSpan}`;
-      //   }
-      //   h2.style.border = "1px dashed #aaa";
-      //   showForm.appendChild(h2);
-      //   h2Input.value = "";
-      // });
+        showForm.appendChild(h2);
+        h2Input.value = "";
+      });
+      //------------------------------------------------------------------------------------------------------------//
+      const labelAddButton = document.getElementById("labelAddButton");
+      labelAddButton.addEventListener("click", function () {
+        const text = document.getElementById("labelText").value.trim();
+        const colStart = +document.getElementById("labelColStart").value;
+        const colSpan = +document.getElementById("labelColSpan").value;
+        const rowStart = +document.getElementById("labelRowStart").value;
+        const rowSpan = +document.getElementById("labelRowSpan").value;
 
-      // const labelAddButton = document.getElementById("labelAddButton");
-      // labelAddButton.addEventListener("click", function () {
-      //   const text = document.getElementById("labelText").value.trim();
-      //   const colStart = +document.getElementById("labelColStart").value;
-      //   const colSpan = +document.getElementById("labelColSpan").value;
-      //   const rowStart = +document.getElementById("labelRowStart").value;
-      //   const rowSpan = +document.getElementById("labelRowSpan").value;
+        if (!text || !colStart || !colSpan || !rowStart || !rowSpan) {
+          alert("لطفا همه مقادیر را کامل وارد کنید.");
+          return;
+        }
 
-      //   if (!text || !colStart || !colSpan || !rowStart || !rowSpan) {
-      //     alert("لطفا همه مقادیر را کامل وارد کنید.");
-      //     return;
-      //   }
+        const gridColumns = parseInt(
+          getComputedStyle(showForm).getPropertyValue("--grid-columns") || 12
+        );
+        if (colStart > gridColumns || colStart + colSpan - 1 > gridColumns) {
+          alert("تعداد ستون‌های انتخابی از grid خارج می‌شود!");
+          return;
+        }
 
-      //   const gridColumns = parseInt(
-      //     getComputedStyle(showForm).getPropertyValue("--grid-columns") || 12
-      //   );
-      //   if (colStart > gridColumns || colStart + colSpan - 1 > gridColumns) {
-      //     alert("تعداد ستون‌های انتخابی از grid خارج می‌شود!");
-      //     return;
-      //   }
+        const label = document.createElement("label");
+        label.textContent = text;
+        label.style.gridColumn = `${colStart} / span ${colSpan}`;
+        label.style.gridRow = `${rowStart} / span ${rowSpan}`;
+        label.style.padding = "2px";
 
-      //   const label = document.createElement("label");
-      //   label.textContent = text;
-      //   label.style.gridColumn = `${colStart} / span ${colSpan}`;
-      //   label.style.gridRow = `${rowStart} / span ${rowSpan}`;
-      //   label.style.padding = "5px";
-      //   label.style.border = "1px dashed #999";
-      //   showForm.appendChild(label);
-      // });
+        showForm.appendChild(label);
+      });
+      //-------------------------------------------------------------------------------------------------------//
+      const textAddButton = document.getElementById("textAddButton");
+      textAddButton.addEventListener("click", function () {
+        const value = document.getElementById("textAddContent").value.trim();
+        const colStart = +document.getElementById("textColStart").value;
+        const colSpan = +document.getElementById("textColSpan").value;
+        const rowStart = +document.getElementById("textRowStart").value;
+        const rowSpan = +document.getElementById("textRowSpan").value;
 
-      // function updateGridColumns() {
-      //   const gridColumns =
-      //     getComputedStyle(showForm).getPropertyValue("--grid-columns") || "12";
-      //   document.getElementById("currentGridColumns").textContent = gridColumns;
-      // }
+        if (!value || !colStart || !colSpan || !rowStart || !rowSpan) {
+          alert("لطفا همه مقادیر را کامل وارد کنید.");
+          return;
+        }
 
-      // window.addEventListener("load", updateGridColumns);
-      // window.addEventListener("resize", updateGridColumns);
+        const gridColumns = parseInt(
+          getComputedStyle(showForm).getPropertyValue("--grid-columns") || 12
+        );
+        if (colStart > gridColumns || colStart + colSpan - 1 > gridColumns) {
+          alert("تعداد ستون‌های انتخابی از grid خارج می‌شود!");
+          return;
+        }
 
-      // // Input Text Add Handler
+        const text = document.createElement("p");
+        text.textContent = value;
+        text.style.gridColumn = `${colStart} / span ${colSpan}`;
+        text.style.gridRow = `${rowStart} / span ${rowSpan}`;
+        text.style.padding = "2px";
+
+        showForm.appendChild(text);
+
+        // Clear the input fields
+        document.getElementById("textAddContent").value = "";
+        document.getElementById("textColStart").value = "";
+        document.getElementById("textColSpan").value = "";
+        document.getElementById("textRowStart").value = "";
+        document.getElementById("textRowSpan").value = "";
+      });
+      //--------------------------------------------------------------------------------------------------------------//
+      const textareaAddButton = document.getElementById("textareaAddButton");
+
+      textareaAddButton.addEventListener("click", function () {
+        const fieldName = document
+          .getElementById("textareaFieldName")
+          .value.trim();
+        const colStart = +document.getElementById("textareaColStart").value;
+        const colSpan = +document.getElementById("textareaColSpan").value;
+        const rowStart = +document.getElementById("textareaRowStart").value;
+        const rowSpan = +document.getElementById("textareaRowSpan").value;
+
+        const requiredRadio = document.querySelector(
+          'input[name="textareaRequiredField"]:checked'
+        );
+        const isRequired = requiredRadio && requiredRadio.value === "required";
+
+        if (!fieldName || !colStart || !colSpan || !rowStart || !rowSpan) {
+          alert("لطفا همه مقادیر را کامل وارد کنید.");
+          return;
+        }
+
+        const gridColumns = parseInt(
+          getComputedStyle(showForm).getPropertyValue("--grid-columns") || 12
+        );
+        if (colStart > gridColumns || colStart + colSpan - 1 > gridColumns) {
+          alert("تعداد ستون‌های انتخابی از grid خارج می‌شود!");
+          return;
+        }
+
+        const textarea = document.createElement("textarea");
+        textarea.name = fieldName;
+        textarea.placeholder = fieldName;
+        textarea.required = isRequired;
+        textarea.style.gridColumn = `${colStart} / span ${colSpan}`;
+        textarea.style.gridRow = `${rowStart} / span ${rowSpan}`;
+        textarea.style.padding = "2px";
+        textarea.style.minHeight = "50px";
+
+        showForm.appendChild(textarea);
+
+        // Clear inputs
+        document.getElementById("textareaFieldName").value = "";
+        document.getElementById("textareaColStart").value = "";
+        document.getElementById("textareaColSpan").value = "";
+        document.getElementById("textareaRowStart").value = "";
+        document.getElementById("textareaRowSpan").value = "";
+        const radios = document.querySelectorAll(
+          'input[name="textareaRequiredField"]'
+        );
+        radios.forEach((radio) => (radio.checked = false));
+      });
+      //------------------------------------------------------------------------------------------------------------//
       // document
       //   .querySelector("#inputTextAddForm .btn-info")
       //   .addEventListener("click", function () {
@@ -520,7 +619,7 @@
       //     showForm.appendChild(input);
       //   });
 
-      // // Input Number Add Handler
+      //------------------------------------------------------------------------------------------------------------//
       // document
       //   .querySelector("#inputNumberAddForm .btn-info")
       //   .addEventListener("click", function () {
