@@ -141,31 +141,58 @@
           <label for="">رنگ دکمه؟</label>
           <br />
           <select>
-            <option value="" style="background-color: #007bff; color: #fff">
+            <option
+              value="btn btn-primary"
+              style="background-color: #007bff; color: #fff"
+            >
               btn btn-primary
             </option>
-            <option value="" style="background-color: #6c757d; color: #fff">
+            <option
+              value="btn btn-secondary"
+              style="background-color: #6c757d; color: #fff"
+            >
               btn btn-secondary
             </option>
-            <option value="" style="background-color: #28a745; color: #fff">
+            <option
+              value="btn btn-success"
+              style="background-color: #28a745; color: #fff"
+            >
               btn btn-success
             </option>
-            <option value="" style="background-color: #dc3545; color: #fff">
+            <option
+              value="btn btn-danger"
+              style="background-color: #dc3545; color: #fff"
+            >
               btn btn-danger
             </option>
-            <option value="" style="background-color: #ffc107; color: #212529">
+            <option
+              value="btn btn-warning"
+              style="background-color: #ffc107; color: #212529"
+            >
               btn btn-warning
             </option>
-            <option value="" style="background-color: #17a2b8; color: #fff">
+            <option
+              value="btn btn-info"
+              style="background-color: #17a2b8; color: #fff"
+            >
               btn btn-info
             </option>
-            <option value="" style="background-color: #f8f9fa; color: #212529">
+            <option
+              value="btn btn-light"
+              style="background-color: #f8f9fa; color: #212529"
+            >
               btn btn-light
             </option>
-            <option value="" style="background-color: #343a40; color: #fff">
+            <option
+              value="btn btn-dark"
+              style="background-color: #343a40; color: #fff"
+            >
               btn btn-dark
             </option>
-            <option value="" style="background-color: #fff; color: #007bff">
+            <option
+              value="btn btn-link"
+              style="background-color: #fff; color: #007bff"
+            >
               btn btn-link
             </option>
           </select>
@@ -192,16 +219,16 @@
           />
 
           <label>شروع از ستون:</label>
-          <input id="labelColStart" type="number" />
+          <input id="inputTextColStart" type="number" />
 
           <label>چند ستون بگیرد:</label>
-          <input id="labelColSpan" type="number" />
+          <input id="inputTextColSpan" type="number" />
 
           <label>شروع از ردیف:</label>
-          <input id="labelRowStart" type="number" />
+          <input id="inputTextRowStart" type="number" />
 
           <label>چند ردیف بگیرد:</label>
-          <input id="labelRowSpan" type="number" />
+          <input id="inputTextRowSpan" type="number" />
 
           <label for="">آیا فیلد مورد نظر ضروری است یا خیر</label><br />
           <label for="">ضروری</label>
@@ -219,16 +246,16 @@
             placeholder="نام وارد شده باید مرتبط و انگلیسی باشد"
           />
           <label>شروع از ستون:</label>
-          <input id="labelColStart" type="number" />
+          <input id="inputNumberColStart" type="number" />
 
           <label>چند ستون بگیرد:</label>
-          <input id="labelColSpan" type="number" />
+          <input id="inputNumberColSpan" type="number" />
 
           <label>شروع از ردیف:</label>
-          <input id="labelRowStart" type="number" />
+          <input id="inputNumberRowStart" type="number" />
 
           <label>چند ردیف بگیرد:</label>
-          <input id="labelRowSpan" type="number" />
+          <input id="inputNumberRowSpan" type="number" />
 
           <label for="">آیا فیلد مورد نظر ضروری است یا خیر</label><br />
           <label for="">ضروری</label>
@@ -240,6 +267,7 @@
 
         <div id="inputSelectboxAddForm" class="hidden">
           <h5>افزودن input(selectbox)</h5>
+
           <label for="">داده با چه نامی به بک اند ارسال شود ؟</label>
           <input
             type="text"
@@ -255,11 +283,17 @@
 
           <div id="optionsContainer"></div>
 
-          <label for="">تعداد ستون مورد نیاز را وارد کنید:</label>
-          <input type="text" />
+          <label>شروع از ستون:</label>
+          <input id="inputSelectColStart" type="number" />
 
-          <label for="">تعداد سطر مورد نیاز را وارد کنید:</label>
-          <input type="text" />
+          <label>چند ستون بگیرد:</label>
+          <input id="inputSelectColSpan" type="number" />
+
+          <label>شروع از ردیف:</label>
+          <input id="inputSelectRowStart" type="number" />
+
+          <label>چند ردیف بگیرد:</label>
+          <input id="inputSelectRowSpan" type="number" />
 
           <label for="">آیا فیلد مورد نظر ضروری است یا خیر</label><br />
           <label for="">ضروری</label>
@@ -278,16 +312,16 @@
           />
 
           <label>شروع از ستون:</label>
-          <input id="labelColStart" type="number" />
+          <input id="inputCheckboxColStart" type="number" />
 
           <label>چند ستون بگیرد:</label>
-          <input id="labelColSpan" type="number" />
+          <input id="inputCheckboxColSpan" type="number" />
 
           <label>شروع از ردیف:</label>
-          <input id="labelRowStart" type="number" />
+          <input id="inputCheckboxRowStart" type="number" />
 
           <label>چند ردیف بگیرد:</label>
-          <input id="labelRowSpan" type="number" />
+          <input id="inputCheckboxRowSpan" type="number" />
 
           <label for="">تعداد چک‌باکس مورد نیاز را وارد کنید:</label>
           <input type="number" id="checkboxCountInput" />
@@ -312,17 +346,24 @@
         </div>
         <div id="inputRadioAddForm" class="hidden">
           <h5>افزودن input(radio)</h5>
+
           <label for="">داده با چه نامی به بک اند ارسال شود ؟</label>
           <input
             type="text"
             placeholder="نام وارد شده باید مرتبط و انگلیسی باشد"
           />
 
-          <label for="">تعداد ستون مورد نیاز را وارد کنید:</label>
-          <input type="text" />
+          <label>شروع از ستون:</label>
+          <input id="inputRadioColStart" type="number" />
 
-          <label for="">تعداد سطر مورد نیاز را وارد کنید:</label>
-          <input type="text" />
+          <label>چند ستون بگیرد:</label>
+          <input id="inputRadioColSpan" type="number" />
+
+          <label>شروع از ردیف:</label>
+          <input id="inputRadioRowStart" type="number" />
+
+          <label>چند ردیف بگیرد:</label>
+          <input id="inputRadioRowSpan" type="number" />
 
           <label for="">تعداد Radio مورد نیاز را وارد کنید:</label>
           <input type="number" id="radioCountInput" />
@@ -573,258 +614,502 @@
         radios.forEach((radio) => (radio.checked = false));
       });
       //------------------------------------------------------------------------------------------------------------//
-      // document
-      //   .querySelector("#inputTextAddForm .btn-info")
-      //   .addEventListener("click", function () {
-      //     const backendName = document
-      //       .querySelector("#inputTextAddForm input[type='text']")
-      //       .value.trim();
-      //     const colStart = parseInt(
-      //       document.querySelector("#inputTextAddForm #labelColStart").value
-      //     );
-      //     const colSpan = parseInt(
-      //       document.querySelector("#inputTextAddForm #labelColSpan").value
-      //     );
-      //     const rowStart = parseInt(
-      //       document.querySelector("#inputTextAddForm #labelRowStart").value
-      //     );
-      //     const rowSpan = parseInt(
-      //       document.querySelector("#inputTextAddForm #labelRowSpan").value
-      //     );
-      //     const isRequired =
-      //       document.querySelector(
-      //         "#inputTextAddForm input[name='requiredField']:checked"
-      //       )?.value === "required";
 
-      //     if (
-      //       !backendName ||
-      //       isNaN(colStart) ||
-      //       isNaN(colSpan) ||
-      //       isNaN(rowStart) ||
-      //       isNaN(rowSpan)
-      //     ) {
-      //       alert("لطفاً تمام فیلدها را تکمیل کنید.");
-      //       return;
-      //     }
+      // رویداد کلیک دکمه افزودن
+      document
+        .querySelector("#buttonAddForm button")
+        .addEventListener("click", function () {
+          // گرفتن مقادیر
+          const label = document
+            .querySelector('#buttonAddForm input[type="text"]')
+            .value.trim();
+          const colorClass = document
+            .querySelector("#buttonAddForm select")
+            .value.trim();
 
-      //     const input = document.createElement("input");
-      //     input.type = "text";
-      //     input.name = backendName;
-      //     if (isRequired) input.required = true;
+          const colStart = document.getElementById("textColStart").value;
+          const colSpan = document.getElementById("textColSpan").value;
+          const rowStart = document.getElementById("textRowStart").value;
+          const rowSpan = document.getElementById("textRowSpan").value;
 
-      //     input.style.gridColumn = `${colStart} / span ${colSpan}`;
-      //     input.style.gridRow = `${rowStart} / span ${rowSpan}`;
-      //     input.style.padding = "5px";
+          // ساخت دکمه
+          const btn = document.createElement("button");
+          btn.innerText = label || "Button";
+          btn.className = colorClass;
 
-      //     showForm.appendChild(input);
-      //   });
+          // استایل گرید
+          btn.style.gridColumnStart = colStart || "auto";
+          btn.style.gridColumnEnd = colSpan ? `span ${colSpan}` : "auto";
+          btn.style.gridRowStart = rowStart || "auto";
+          btn.style.gridRowEnd = rowSpan ? `span ${rowSpan}` : "auto";
 
-      //------------------------------------------------------------------------------------------------------------//
-      // document
-      //   .querySelector("#inputNumberAddForm .btn-info")
-      //   .addEventListener("click", function () {
-      //     const backendName = document
-      //       .querySelector("#inputNumberAddForm input[type='text']")
-      //       .value.trim();
-      //     const colStart = parseInt(
-      //       document.querySelector("#inputNumberAddForm #labelColStart").value
-      //     );
-      //     const colSpan = parseInt(
-      //       document.querySelector("#inputNumberAddForm #labelColSpan").value
-      //     );
-      //     const rowStart = parseInt(
-      //       document.querySelector("#inputNumberAddForm #labelRowStart").value
-      //     );
-      //     const rowSpan = parseInt(
-      //       document.querySelector("#inputNumberAddForm #labelRowSpan").value
-      //     );
-      //     const isRequired =
-      //       document.querySelector(
-      //         "#inputNumberAddForm input[name='requiredField']:checked"
-      //       )?.value === "required";
+          // افزودن به فرم
+          showForm.appendChild(btn);
 
-      //     if (
-      //       !backendName ||
-      //       isNaN(colStart) ||
-      //       isNaN(colSpan) ||
-      //       isNaN(rowStart) ||
-      //       isNaN(rowSpan)
-      //     ) {
-      //       alert("لطفاً تمام فیلدها را تکمیل کنید.");
-      //       return;
-      //     }
+          // پاک کردن ورودی‌ها
+          document.querySelector('#buttonAddForm input[type="text"]').value =
+            "";
+          document.querySelector("#buttonAddForm select").selectedIndex = 0;
+          document.getElementById("textColStart").value = "";
+          document.getElementById("textColSpan").value = "";
+          document.getElementById("textRowStart").value = "";
+          document.getElementById("textRowSpan").value = "";
+        });
+      //----------------------------------------------------------------------------------------------------------------------------------//
+      document
+        .querySelector("#inputTextAddForm button")
+        .addEventListener("click", function () {
+          const name = document
+            .querySelector('#inputTextAddForm input[type="text"]')
+            .value.trim();
 
-      //     const input = document.createElement("input");
-      //     input.type = "number";
-      //     input.name = backendName;
-      //     if (isRequired) input.required = true;
+          const colStart = document.getElementById("inputTextColStart").value;
+          const colSpan = document.getElementById("inputTextColSpan").value;
+          const rowStart = document.getElementById("inputTextRowStart").value;
+          const rowSpan = document.getElementById("inputTextRowSpan").value;
 
-      //     input.style.gridColumn = `${colStart} / span ${colSpan}`;
-      //     input.style.gridRow = `${rowStart} / span ${rowSpan}`;
-      //     input.style.padding = "5px";
+          const requiredValue = document.querySelector(
+            '#inputTextAddForm input[name="requiredField"]:checked'
+          );
+          const isRequired =
+            requiredValue && requiredValue.value === "required";
 
-      //     showForm.appendChild(input);
-      //   });
+          const input = document.createElement("input");
+          input.type = "text";
+          input.name = name || "unnamedInput";
+          input.placeholder = "ورودی کاربر";
+          if (isRequired) input.required = true;
 
-      // document
-      //   .getElementById("showOptionsBtn")
-      //   .addEventListener("click", function () {
-      //     const countInput = document.getElementById("optionCountInput");
-      //     const count = parseInt(countInput.value);
-      //     const container = document.getElementById("optionsContainer");
+          // استایل گرید
+          input.style.display = "grid";
+          input.style.width = "100%";
+          input.style.gridColumnStart = colStart || "auto";
+          input.style.gridColumnEnd = colSpan ? `span ${colSpan}` : "auto";
+          input.style.gridRowStart = rowStart || "auto";
+          input.style.gridRowEnd = rowSpan ? `span ${rowSpan}` : "auto";
 
-      //     container.innerHTML = ""; // حذف گزینه‌های قبلی
+          showForm.appendChild(input);
 
-      //     if (!isNaN(count) && count > 0) {
-      //       for (let i = 1; i <= count; i++) {
-      //         const label = document.createElement("label");
-      //         label.textContent = `نام Option ${i}:`;
+          // پاک کردن فرم
+          document.querySelector('#inputTextAddForm input[type="text"]').value =
+            "";
+          document.getElementById("inputTextColStart").value = "";
+          document.getElementById("inputTextColSpan").value = "";
+          document.getElementById("inputTextRowStart").value = "";
+          document.getElementById("inputTextRowSpan").value = "";
+          const checkedRadio = document.querySelector(
+            '#inputTextAddForm input[name="requiredField"]:checked'
+          );
+          if (checkedRadio) checkedRadio.checked = false;
+        });
+      //---------------------------------------------------------------------------------------------------------------------//
+      document
+        .querySelector("#inputNumberAddForm button")
+        .addEventListener("click", function () {
+          // گرفتن نام input
+          const name = document
+            .querySelector('#inputNumberAddForm input[type="text"]')
+            .value.trim();
 
-      //         const input = document.createElement("input");
-      //         input.type = "text";
-      //         input.name = `optionName${i}`;
-      //         input.placeholder = `نام Option ${i}`;
-      //         input.style.marginBottom = "5px";
+          // گرفتن مقادیر گرید
+          const colStart = document.getElementById("inputNumberColStart").value;
+          const colSpan = document.getElementById("inputNumberColSpan").value;
+          const rowStart = document.getElementById("inputNumberRowStart").value;
+          const rowSpan = document.getElementById("inputNumberRowSpan").value;
 
-      //         container.appendChild(label);
-      //         container.appendChild(input);
-      //         container.appendChild(document.createElement("br"));
-      //       }
-      //     } else {
-      //       alert("لطفا یک عدد معتبر وارد کنید!");
-      //     }
-      //   });
-      // const generateBtn = document.getElementById("generateCheckboxInputs");
-      // const labelsContainer = document.getElementById(
-      //   "checkboxLabelsContainer"
-      // );
-      // const previewContainer = document.getElementById(
-      //   "checkboxPreviewContainer"
-      // );
-      // const addBtn = document.getElementById("addCheckboxesBtn");
+          // بررسی required بودن فیلد
+          const requiredValue = document.querySelector(
+            '#inputNumberAddForm input[name="requiredField"]:checked'
+          );
+          const isRequired =
+            requiredValue && requiredValue.value === "required";
 
-      // generateBtn.addEventListener("click", function () {
-      //   const count = parseInt(
-      //     document.getElementById("checkboxCountInput").value
-      //   );
-      //   labelsContainer.innerHTML = "";
-      //   previewContainer.innerHTML = "";
+          // ساخت input
+          const input = document.createElement("input");
+          input.type = "number";
+          input.name = name || "unnamedInput";
+          input.placeholder = "عدد وارد کنید";
+          if (isRequired) input.required = true;
 
-      //   if (!isNaN(count) && count > 0) {
-      //     for (let i = 1; i <= count; i++) {
-      //       const label = document.createElement("label");
-      //       label.textContent = `Label چک‌باکس ${i}:`;
+          // استایل گرید
+          input.style.display = "block";
+          input.style.width = "100%";
+          input.style.height = "100%";
+          input.style.boxSizing = "border-box";
+          // grid-area روش بهتره
+          input.style.gridArea = `${rowStart || "auto"} / ${
+            colStart || "auto"
+          } / span ${rowSpan || 1} / span ${colSpan || 1}`;
 
-      //       const input = document.createElement("input");
-      //       input.type = "text";
-      //       input.name = `checkboxLabel${i}`;
-      //       input.placeholder = `Label چک‌باکس ${i}`;
-      //       input.style.marginBottom = "5px";
+          // افزودن به فرم
+          showForm.appendChild(input);
 
-      //       labelsContainer.appendChild(label);
-      //       labelsContainer.appendChild(input);
-      //       labelsContainer.appendChild(document.createElement("br"));
-      //     }
-      //   } else {
-      //     alert("لطفا یک عدد معتبر وارد کنید!");
-      //   }
-      // });
+          // پاک کردن ورودی‌ها
+          document.querySelector(
+            '#inputNumberAddForm input[type="text"]'
+          ).value = "";
+          document.getElementById("inputNumberColStart").value = "";
+          document.getElementById("inputNumberColSpan").value = "";
+          document.getElementById("inputNumberRowStart").value = "";
+          document.getElementById("inputNumberRowSpan").value = "";
+          const checkedRadio = document.querySelector(
+            '#inputNumberAddForm input[name="requiredField"]:checked'
+          );
+          if (checkedRadio) checkedRadio.checked = false;
+        });
+      //----------------------------------------------------------------------------------------------------------------------//
+      document
+        .getElementById("showOptionsBtn")
+        .addEventListener("click", function () {
+          const optionsContainer = document.getElementById("optionsContainer");
+          optionsContainer.innerHTML = ""; // هر بار پاک کن
 
-      // addBtn.addEventListener("click", function () {
-      //   previewContainer.innerHTML = "";
+          const count = parseInt(
+            document.getElementById("optionCountInput").value
+          );
 
-      //   const inputs = labelsContainer.querySelectorAll('input[type="text"]');
+          if (isNaN(count) || count <= 0) {
+            alert("تعداد option باید عدد مثبت باشد!");
+            return;
+          }
 
-      //   if (inputs.length === 0) {
-      //     alert("ابتدا تعداد چک‌باکس و لیبل‌های آنها را وارد کنید!");
-      //     return;
-      //   }
+          for (let i = 1; i <= count; i++) {
+            const input = document.createElement("input");
+            input.type = "text";
+            input.placeholder = `مقدار option شماره ${i}`;
+            input.classList.add("option-value");
+            optionsContainer.appendChild(input);
+            optionsContainer.appendChild(document.createElement("br"));
+          }
+        });
+      //-----------------------------------------------------------------------------------------------------------------------//
+      // اسکریپت دکمه باز کردن inputهای option
+      document
+        .getElementById("showOptionsBtn")
+        .addEventListener("click", function () {
+          const optionsContainer = document.getElementById("optionsContainer");
+          optionsContainer.innerHTML = ""; // پاک کردن قبلی‌ها
 
-      //   inputs.forEach((inp, index) => {
-      //     const checkbox = document.createElement("input");
-      //     checkbox.type = "checkbox";
-      //     checkbox.name = "dynamicCheckbox";
-      //     checkbox.value = inp.value || `Checkbox ${index + 1}`;
+          const count = parseInt(
+            document.getElementById("optionCountInput").value
+          );
 
-      //     const label = document.createElement("label");
-      //     label.textContent = inp.value || `Checkbox ${index + 1}`;
-      //     label.style.marginRight = "10px";
+          if (isNaN(count) || count <= 0) {
+            alert("تعداد option باید عدد مثبت باشد!");
+            return;
+          }
 
-      //     const wrapper = document.createElement("div");
-      //     wrapper.appendChild(checkbox);
-      //     wrapper.appendChild(label);
+          for (let i = 1; i <= count; i++) {
+            const input = document.createElement("input");
+            input.type = "text";
+            input.placeholder = `مقدار option شماره ${i}`;
+            input.classList.add("option-value");
+            optionsContainer.appendChild(input);
+            optionsContainer.appendChild(document.createElement("br"));
+          }
+        });
 
-      //     previewContainer.appendChild(wrapper);
-      //   });
-      // });
+      document
+        .querySelector("#inputSelectboxAddForm .btn-info")
+        .addEventListener("click", function () {
+          const name = document
+            .querySelector('#inputSelectboxAddForm input[type="text"]')
+            .value.trim();
 
-      // const generateRadioBtn = document.getElementById("generateRadioInputs");
-      // const radioLabelsContainer = document.getElementById(
-      //   "radioLabelsContainer"
-      // );
-      // const radioPreviewContainer = document.getElementById(
-      //   "radioPreviewContainer"
-      // );
-      // const addRadiosBtn = document.getElementById("addRadiosBtn");
+          const optionInputs = document.querySelectorAll(
+            "#optionsContainer .option-value"
+          );
+          const options = [];
+          optionInputs.forEach((input) => {
+            if (input.value.trim()) {
+              options.push(input.value.trim());
+            }
+          });
 
-      // generateRadioBtn.addEventListener("click", function () {
-      //   const count = parseInt(
-      //     document.getElementById("radioCountInput").value
-      //   );
-      //   radioLabelsContainer.innerHTML = "";
-      //   radioPreviewContainer.innerHTML = "";
+          if (options.length === 0) {
+            alert("حداقل یک option وارد کنید!");
+            return;
+          }
 
-      //   if (!isNaN(count) && count > 0) {
-      //     for (let i = 1; i <= count; i++) {
-      //       const label = document.createElement("label");
-      //       label.textContent = `Label رادیو ${i}:`;
+          const colStart = document.getElementById("inputSelectColStart").value;
+          const colSpan = document.getElementById("inputSelectColSpan").value;
+          const rowStart = document.getElementById("inputSelectRowStart").value;
+          const rowSpan = document.getElementById("inputSelectRowSpan").value;
 
-      //       const input = document.createElement("input");
-      //       input.type = "text";
-      //       input.name = `radioLabel${i}`;
-      //       input.placeholder = `Label رادیو ${i}`;
-      //       input.style.marginBottom = "5px";
+          const requiredValue = document.querySelector(
+            '#inputSelectboxAddForm input[name="requiredField"]:checked'
+          );
+          const isRequired =
+            requiredValue && requiredValue.value === "required";
 
-      //       radioLabelsContainer.appendChild(label);
-      //       radioLabelsContainer.appendChild(input);
-      //       radioLabelsContainer.appendChild(document.createElement("br"));
-      //     }
-      //   } else {
-      //     alert("لطفاً یک عدد معتبر وارد کنید!");
-      //   }
-      // });
+          // ساخت select
+          const select = document.createElement("select");
+          select.name = name || "unnamedSelect";
+          if (isRequired) select.required = true;
 
-      // addRadiosBtn.addEventListener("click", function () {
-      //   radioPreviewContainer.innerHTML = "";
+          options.forEach((text) => {
+            const option = document.createElement("option");
+            option.text = text;
+            option.value = text;
+            select.appendChild(option);
+          });
 
-      //   const inputs =
-      //     radioLabelsContainer.querySelectorAll('input[type="text"]');
+          // استایل grid
+          select.style.display = "block";
+          select.style.width = "100%";
+          select.style.height = "100%";
+          select.style.boxSizing = "border-box";
+          select.style.gridColumnStart = colStart || "auto";
+          select.style.gridColumnEnd = colSpan ? `span ${colSpan}` : "auto";
+          select.style.gridRowStart = rowStart || "auto";
+          select.style.gridRowEnd = rowSpan ? `span ${rowSpan}` : "auto";
 
-      //   if (inputs.length === 0) {
-      //     alert("ابتدا تعداد Radio و لیبل‌های آن را وارد کنید!");
-      //     return;
-      //   }
+          showForm.appendChild(select);
 
-      //   // نام مشترک برای همه radioها تا یک گروه باشند
-      //   const radioGroupName = "dynamicRadioGroup";
+          // پاک کردن مقادیر
+          document.querySelector(
+            '#inputSelectboxAddForm input[type="text"]'
+          ).value = "";
+          document.getElementById("optionCountInput").value = "";
+          document.getElementById("inputSelectColStart").value = "";
+          document.getElementById("inputSelectColSpan").value = "";
+          document.getElementById("inputSelectRowStart").value = "";
+          document.getElementById("inputSelectRowSpan").value = "";
+          document.getElementById("optionsContainer").innerHTML = "";
+          const checkedRadio = document.querySelector(
+            '#inputSelectboxAddForm input[name="requiredField"]:checked'
+          );
+          if (checkedRadio) checkedRadio.checked = false;
+        });
+      //----------------------------------------------------------------------------------------------------------------------//
+      document
+        .getElementById("generateCheckboxInputs")
+        .addEventListener("click", function () {
+          const count = parseInt(
+            document.getElementById("checkboxCountInput").value
+          );
 
-      //   inputs.forEach((inp, index) => {
-      //     const radio = document.createElement("input");
-      //     radio.type = "radio";
-      //     radio.name = radioGroupName;
-      //     radio.value = inp.value || `Radio ${index + 1}`;
+          const container = document.getElementById("checkboxLabelsContainer");
+          container.innerHTML = ""; // پاک کردن قبلی‌ها
 
-      //     const label = document.createElement("label");
-      //     label.textContent = inp.value || `Radio ${index + 1}`;
-      //     label.style.marginRight = "10px";
+          if (isNaN(count) || count <= 0) {
+            alert("تعداد چک‌باکس باید بزرگتر از صفر باشد!");
+            return;
+          }
 
-      //     const wrapper = document.createElement("div");
-      //     wrapper.appendChild(radio);
-      //     wrapper.appendChild(label);
+          for (let i = 1; i <= count; i++) {
+            const label = document.createElement("label");
+            label.textContent = `Label چک‌باکس شماره ${i}: `;
 
-      //     radioPreviewContainer.appendChild(wrapper);
-      //   });
-      // });
+            const input = document.createElement("input");
+            input.type = "text";
+            input.classList.add("checkbox-label-input");
+
+            container.appendChild(label);
+            container.appendChild(input);
+            container.appendChild(document.createElement("br"));
+          }
+        });
+      //---------------------------------------------------------------------------------------------------------------------------//
+
+      document
+        .getElementById("addCheckboxesBtn")
+        .addEventListener("click", function () {
+          const name = document
+            .querySelector('#inputCheckboxAddForm input[type="text"]')
+            .value.trim();
+
+          const colStart = document.getElementById(
+            "inputCheckboxColStart"
+          ).value;
+          const colSpan = document.getElementById("inputCheckboxColSpan").value;
+          const rowStart = document.getElementById(
+            "inputCheckboxRowStart"
+          ).value;
+          const rowSpan = document.getElementById("inputCheckboxRowSpan").value;
+
+          const requiredValue = document.querySelector(
+            '#inputCheckboxAddForm input[name="requiredField"]:checked'
+          );
+          const isRequired =
+            requiredValue && requiredValue.value === "required";
+
+          // گرفتن label چک‌باکس‌ها
+          const labelInputs = document.querySelectorAll(
+            "#checkboxLabelsContainer .checkbox-label-input"
+          );
+          const labels = [];
+          labelInputs.forEach((input) => {
+            if (input.value.trim()) {
+              labels.push(input.value.trim());
+            }
+          });
+
+          if (labels.length === 0) {
+            alert("حداقل یک label چک‌باکس وارد کنید!");
+            return;
+          }
+
+          // ساخت div گروه چک‌باکس‌ها
+          const checkboxGroup = document.createElement("div");
+          checkboxGroup.style.display = "grid";
+          checkboxGroup.style.gridTemplateColumns = "1fr";
+          checkboxGroup.style.gridGap = "5px";
+          checkboxGroup.style.width = "100%";
+          checkboxGroup.style.height = "100%";
+          checkboxGroup.style.boxSizing = "border-box";
+          checkboxGroup.style.display = "flex";
+          checkboxGroup.style.flexWrap = "wrap"; // اجازه میده چند ردیف بشه اگر فضا کم باشه
+          checkboxGroup.style.gap = "10px";
+
+          checkboxGroup.style.gridColumnStart = colStart || "auto";
+          checkboxGroup.style.gridColumnEnd = colSpan
+            ? `span ${colSpan}`
+            : "auto";
+          checkboxGroup.style.gridRowStart = rowStart || "auto";
+          checkboxGroup.style.gridRowEnd = rowSpan ? `span ${rowSpan}` : "auto";
+
+          labels.forEach((labelText) => {
+            const wrapper = document.createElement("label");
+            wrapper.style.display = "flex";
+            wrapper.style.alignItems = "center";
+            wrapper.style.gap = "5px";
+
+            const checkbox = document.createElement("input");
+            checkbox.type = "checkbox";
+            checkbox.name = name || "unnamedCheckboxGroup";
+            checkbox.value = labelText;
+            if (isRequired) checkbox.required = true;
+
+            wrapper.appendChild(checkbox);
+            wrapper.appendChild(document.createTextNode(labelText));
+            checkboxGroup.appendChild(wrapper);
+          });
+
+          showForm.appendChild(checkboxGroup);
+
+          // پاک کردن فرم
+          document.querySelector(
+            '#inputCheckboxAddForm input[type="text"]'
+          ).value = "";
+          document.getElementById("inputCheckboxColStart").value = "";
+          document.getElementById("inputCheckboxColSpan").value = "";
+          document.getElementById("inputCheckboxRowStart").value = "";
+          document.getElementById("inputCheckboxRowSpan").value = "";
+          document.getElementById("checkboxCountInput").value = "";
+          document.getElementById("checkboxLabelsContainer").innerHTML = "";
+          const checkedRadio = document.querySelector(
+            '#inputCheckboxAddForm input[name="requiredField"]:checked'
+          );
+          if (checkedRadio) checkedRadio.checked = false;
+        });
+      //-------------------------------------------------------------------------------------------------------------------//
+      // ساخت inputهای label برای radioها
+      document
+        .getElementById("generateRadioInputs")
+        .addEventListener("click", () => {
+          const count = parseInt(
+            document.getElementById("radioCountInput").value
+          );
+          const container = document.getElementById("radioLabelsContainer");
+          container.innerHTML = "";
+
+          if (isNaN(count) || count <= 0) {
+            alert("تعداد radio باید بزرگتر از صفر باشد!");
+            return;
+          }
+
+          for (let i = 1; i <= count; i++) {
+            const label = document.createElement("label");
+            label.textContent = `Label radio شماره ${i}: `;
+
+            const input = document.createElement("input");
+            input.type = "text";
+            input.classList.add("radio-label-input");
+
+            container.appendChild(label);
+            container.appendChild(input);
+            container.appendChild(document.createElement("br"));
+          }
+        });
+      //----------------------------------------------------------------------------------------------------------------------------------//
+      document.getElementById("addRadiosBtn").addEventListener("click", () => {
+        const name = document
+          .querySelector('#inputRadioAddForm > input[type="text"]')
+          .value.trim();
+
+        const colStart = document.getElementById("inputRadioColStart").value;
+        const colSpan = document.getElementById("inputRadioColSpan").value;
+        const rowStart = document.getElementById("inputRadioRowStart").value;
+        const rowSpan = document.getElementById("inputRadioRowSpan").value;
+
+        const requiredValue = document.querySelector(
+          '#inputRadioAddForm input[name="requiredField"]:checked'
+        );
+        const isRequired = requiredValue && requiredValue.value === "required";
+
+        const labelInputs = document.querySelectorAll(
+          "#radioLabelsContainer .radio-label-input"
+        );
+        const labels = [];
+        labelInputs.forEach((input) => {
+          if (input.value.trim()) {
+            labels.push(input.value.trim());
+          }
+        });
+
+        if (labels.length === 0) {
+          alert("حداقل یک label radio وارد کنید!");
+          return;
+        }
+
+        // ساخت div گروه radio
+        const radioGroup = document.createElement("div");
+        radioGroup.style.display = "flex";
+        radioGroup.style.flexWrap = "wrap";
+        radioGroup.style.gap = "10px";
+        radioGroup.style.width = "100%";
+        radioGroup.style.height = "100%";
+        radioGroup.style.boxSizing = "border-box";
+        radioGroup.style.gridColumnStart = colStart || "auto";
+        radioGroup.style.gridColumnEnd = colSpan ? `span ${colSpan}` : "auto";
+        radioGroup.style.gridRowStart = rowStart || "auto";
+        radioGroup.style.gridRowEnd = rowSpan ? `span ${rowSpan}` : "auto";
+
+        labels.forEach((labelText) => {
+          const wrapper = document.createElement("label");
+          wrapper.style.display = "flex";
+          wrapper.style.alignItems = "center";
+          wrapper.style.gap = "5px";
+
+          const radio = document.createElement("input");
+          radio.type = "radio";
+          radio.name = name || "unnamedRadioGroup";
+          radio.value = labelText;
+          if (isRequired) radio.required = true;
+
+          wrapper.appendChild(radio);
+          wrapper.appendChild(document.createTextNode(labelText));
+          radioGroup.appendChild(wrapper);
+        });
+
+        showForm.appendChild(radioGroup);
+
+        // پاک کردن فرم
+        document.querySelector(
+          '#inputRadioAddForm > input[type="text"]'
+        ).value = "";
+        document.getElementById("inputRadioColStart").value = "";
+        document.getElementById("inputRadioColSpan").value = "";
+        document.getElementById("inputRadioRowStart").value = "";
+        document.getElementById("inputRadioRowSpan").value = "";
+        document.getElementById("radioCountInput").value = "";
+        document.getElementById("radioLabelsContainer").innerHTML = "";
+        const checkedRadio = document.querySelector(
+          '#inputRadioAddForm input[name="requiredField"]:checked'
+        );
+        if (checkedRadio) checkedRadio.checked = false;
+      });
     </script>
   </body>
 </html>
