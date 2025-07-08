@@ -198,16 +198,16 @@
           </select>
           <br />
           <label>شروع از ستون:</label>
-          <input id="textColStart" type="number" />
+          <input id="buttonAddColStart" type="number" />
 
           <label>تعداد ستون:</label>
-          <input id="textColSpan" type="number" />
+          <input id="buttonAddColSpan" type="number" />
 
           <label>شروع از سطر:</label>
-          <input id="textRowStart" type="number" />
+          <input id="buttonAddRowStart" type="number" />
 
           <label>تعداد سطر:</label>
-          <input id="textRowSpan" type="number" />
+          <input id="buttonAddRowSpan" type="number" />
           <button type="button" class="btn btn-info">افزودن</button>
         </div>
         <div id="inputTextAddForm" class="hidden">
@@ -274,15 +274,6 @@
             placeholder="نام وارد شده باید مرتبط و انگلیسی باشد"
           />
 
-          <label for="">تعداد option مورد نیاز</label>
-          <input type="text" id="optionCountInput" />
-
-          <button type="button" id="showOptionsBtn">
-            باز شدن input برای وارد کردن option
-          </button>
-
-          <div id="optionsContainer"></div>
-
           <label>شروع از ستون:</label>
           <input id="inputSelectColStart" type="number" />
 
@@ -294,6 +285,15 @@
 
           <label>چند ردیف بگیرد:</label>
           <input id="inputSelectRowSpan" type="number" />
+
+          <label for="">تعداد option مورد نیاز</label>
+          <input type="text" id="optionCountInput" />
+
+          <button type="button" id="showOptionsBtn">
+            باز شدن input برای وارد کردن option
+          </button>
+
+          <div id="optionsContainer"></div>
 
           <label for="">آیا فیلد مورد نظر ضروری است یا خیر</label><br />
           <label for="">ضروری</label>
@@ -493,6 +493,10 @@
 
         showForm.appendChild(h2);
         h2Input.value = "";
+        document.getElementById("h2ColStart").value = "";
+        document.getElementById("h2ColSpan").value = "";
+        document.getElementById("h2RowStart").value = "";
+        document.getElementById("h2RowSpan").value = "";
       });
       //------------------------------------------------------------------------------------------------------------//
       const labelAddButton = document.getElementById("labelAddButton");
@@ -523,6 +527,11 @@
         label.style.padding = "2px";
 
         showForm.appendChild(label);
+        document.getElementById("labelText").value = "";
+        document.getElementById("labelColStart").value = "";
+        document.getElementById("labelColSpan").value = "";
+        document.getElementById("labelRowStart").value = "";
+        document.getElementById("labelRowSpan").value = "";
       });
       //-------------------------------------------------------------------------------------------------------//
       const textAddButton = document.getElementById("textAddButton");
@@ -627,10 +636,10 @@
             .querySelector("#buttonAddForm select")
             .value.trim();
 
-          const colStart = document.getElementById("textColStart").value;
-          const colSpan = document.getElementById("textColSpan").value;
-          const rowStart = document.getElementById("textRowStart").value;
-          const rowSpan = document.getElementById("textRowSpan").value;
+          const colStart = document.getElementById("buttonAddColStart").value;
+          const colSpan = document.getElementById("buttonAddColSpan").value;
+          const rowStart = document.getElementById("buttonAddRowStart").value;
+          const rowSpan = document.getElementById("buttonAddRowSpan").value;
 
           // ساخت دکمه
           const btn = document.createElement("button");
@@ -650,10 +659,10 @@
           document.querySelector('#buttonAddForm input[type="text"]').value =
             "";
           document.querySelector("#buttonAddForm select").selectedIndex = 0;
-          document.getElementById("textColStart").value = "";
-          document.getElementById("textColSpan").value = "";
-          document.getElementById("textRowStart").value = "";
-          document.getElementById("textRowSpan").value = "";
+          document.getElementById("buttonAddColStart").value = "";
+          document.getElementById("buttonAddColSpan").value = "";
+          document.getElementById("buttonAddRowStart").value = "";
+          document.getElementById("buttonAddRowSpan").value = "";
         });
       //----------------------------------------------------------------------------------------------------------------------------------//
       document
